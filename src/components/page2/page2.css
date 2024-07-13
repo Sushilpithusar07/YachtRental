@@ -1,0 +1,64 @@
+.page2{
+  padding: 4rem;
+  text-align: center;
+}
+.page2 h1{
+  padding: 10px 0;
+}
+.page2 h3{
+  font-size: 25px;
+  padding: 10px 0;
+  color: #555555;
+}
+.page2 p{
+  padding: 0 60px;
+}
+.page2 h4{
+  padding: 20px 0;
+  font-size: 25px;
+  color: #555555;
+}
+
+@media (max-width: 900px) {
+  .page2{
+    padding: 2.3rem;
+  }
+  .page2 h1{
+    padding: 10px 0;
+  }
+  .page2 h3{
+    font-size: 25px;
+    padding: 10px 0;
+    color: #555555;
+  }
+  .page2 p{
+    padding: 0 40px;
+  }
+  .page2 h4{
+    padding: 20px 0;
+    font-size: 25px;
+    color: #555555;
+  }
+}
+@media (max-width: 700px) {
+  .page2{
+    padding: 1.3rem;
+  }
+  .page2 p{
+  padding: 0 10px;
+  font-size: 14px;
+}
+.page2 h1{
+  padding: 10px 0;
+  font-size: 23px;
+}
+.page2 h3{
+  font-size: 18px;
+  padding: 10px 0;
+  color: #555555;
+}
+.page2 h4{
+  padding: 18px 0;
+  font-size: 18px;
+}
+}
