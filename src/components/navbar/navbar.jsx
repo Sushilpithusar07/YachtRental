@@ -6,34 +6,22 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(true);
-  const [sticky, setSticky] = useState(false);
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setSticky(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+  
   return (
     <>
       <div className="bar-icon" onClick={toggleMenu}>
         <img src={barIcon} alt="" />
       </div>
-      <nav className={`navbar lr-space ${sticky ? 'after-nav' : ''}`} id='hero'>
+      <nav className="navbar lr-space" id='hero'>
         <div className="logo">
           <img src={logo} alt="" />
         </div>
-        <div className={`nav-lists ${menuVisible ? '' : 'hide'}`}>
+        <div className={`nav-lists hide${menuVisible ? '' : 'hide'}`}>
           <ul className='center'>
             <li>
               <Link to='hero' smooth={true} offset={0} duration={500}>
@@ -41,18 +29,18 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to='all-yachts' smooth={true} offset={0} duration={500}>
+              <Link to='all-yachts' smooth={true} offset={150} duration={500}>
                 Yachts
               </Link>
             </li>
             
             <li>
-              <Link to='fishing' smooth={true} offset={0} duration={500}>
+              <Link to='fishing' smooth={true} offset={250} duration={500}>
                 Fishing Trips
               </Link>
             </li>
             <li>
-              <Link to='charter' smooth={true} offset={0} duration={500}>
+              <Link to='charter' smooth={true} offset={500} duration={500}>
                 Charter Yachts
               </Link>
             </li>
